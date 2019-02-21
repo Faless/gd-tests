@@ -1,0 +1,17 @@
+HTTP/1.1 301 Moved Permanently
+Date: Sun, 11 Nov 2018 18:55:52 GMT
+Server: Apache/2.2.16
+Location: http://fsfe.org/
+Vary: Accept-Encoding
+Content-Length: 293
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://fsfe.org/">here</a>.</p>
+<hr>
+<address>Apache/2.2.16 Server at www.fsfe.org Port 80</address>
+</body></html>

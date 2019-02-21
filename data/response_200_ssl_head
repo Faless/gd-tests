@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx/1.6.2
+Date: Sun, 11 Nov 2018 18:55:52 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+X-Powered-By: PHP/5.6.38-0+deb8u1
+Cache-Control: private, must-revalidate
+pragma: no-cache
+expires: -1
+Set-Cookie: october_session=eyJpdiI6IlVrRmtEZlRZZ0I2UFBpVktRcVIzT2c9PSIsInZhbHVlIjoiSHU0ZE1xcEdSUCtOMjFQQXp6UEUwUEd1VW9MKzhUSnBLS2huSyttbTRpbFpvb1wvTTIzRjBMTFVFVGZHNGQ5SGw1T01BbGdtQ2FTdW5ZZk5SckwyY0hRPT0iLCJtYWMiOiI1NmJlOTYyNWE5MTdiYmUzZDYwMmU2ZDQwMzIyZGFkNDliMzEwM2FiNjQ1MmVkNWU3OTA1ZjNkYWM2YjZmZjIxIn0%3D; expires=Sun, 11-Nov-2018 20:55:52 GMT; Max-Age=7200; path=/; httponly
+

@@ -1,0 +1,30 @@
+HTTP/1.1 404 Not Found
+Server: nginx/1.6.2
+Date: Sun, 11 Nov 2018 18:55:54 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.6.38-0+deb8u1
+Cache-Control: private, must-revalidate
+pragma: no-cache
+expires: -1
+Set-Cookie: october_session=eyJpdiI6ImdcL0dIbUs4cUlLcnBlSmlsN1UrQjRBPT0iLCJ2YWx1ZSI6Ik4rejFVZmsyRVZBaDUrbUtUOVwvUjRwWVFrc2ZcL201OWdYXC9JRG53OHRYUkIrT1wvbmY0a0E0emkxdVZFMHoycUNHbkxOV0tkNExOQklDTkdDVTZPR3dVZz09IiwibWFjIjoiOTRlZTZkYWQ4YWRkYjAxYTNmMTliYmRkM2UwNTJjZDQ3MDBiMzFkNDRmNDkwOTI5NDk0ZDk3NjFiZWYyMmQyZSJ9; expires=Sun, 11-Nov-2018 20:55:54 GMT; Max-Age=7200; path=/; httponly
+Vary: Accept-Encoding
+
+1c0
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Page not found</title>
+        <link href="https://godotengine.org/modules/system/assets/css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1><i class="icon-chain-broken warning"></i> Page not found</h1>
+            <p class="lead">The requested page cannot be found.</p>
+        </div>
+    </body>
+</html>
+0
+
