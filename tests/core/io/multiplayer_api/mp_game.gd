@@ -47,9 +47,10 @@ mastersync func mastersyncfunc(val = 0):
 		state['mastersyncfunc'] += 1
 	else:
 		mastersyncvar += val
+
 	var id = multiplayer.get_network_unique_id()
 	var caller = multiplayer.get_rpc_sender_id()
-	get_parent().get_parent().assert_cond(id == get_network_master() || (caller == 0) && !is_network_master())
+	get_parent().get_parent().assert_cond(id == get_network_master() || caller == id || (caller == 0 && !is_network_master()))
 
 puppetsync func puppetsyncfunc(val = 0):
 	if val == 0:
@@ -58,7 +59,7 @@ puppetsync func puppetsyncfunc(val = 0):
 		puppetsyncvar += val
 	var id = multiplayer.get_network_unique_id()
 	var caller = multiplayer.get_rpc_sender_id()
-	get_parent().get_parent().assert_cond(id != get_network_master() || (caller == 0 && is_network_master()))
+	get_parent().get_parent().assert_cond(id != get_network_master() || caller == id || (caller == 0 && is_network_master()))
 
 remotesync func remotesyncfunc(val = 0):
 	if val == 0:
