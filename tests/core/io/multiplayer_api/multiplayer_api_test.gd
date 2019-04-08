@@ -12,10 +12,6 @@ var tests = {
 	'puppet_sync': 0
 }
 
-var client = HTTPClient.new()
-var current = null
-var _read = 0
-
 var masterapi = MultiplayerAPI.new()
 var puppet1api = MultiplayerAPI.new()
 var puppet2api = MultiplayerAPI.new()
