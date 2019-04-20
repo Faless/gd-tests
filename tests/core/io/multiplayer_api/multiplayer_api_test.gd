@@ -42,11 +42,18 @@ func setup():
 	var func_calls = get_expected_func_count(true)
 	# Wait for connection to be established
 	yield(get_tree().create_timer(1), "timeout")
+	# Get all ids
+	var all_ids = masterapi.get_network_connected_peers()
+	all_ids.push_back(1)
 	for peer in get_children():
 		for player in peer.get_children():
 			for k in func_calls:
 				player.rpc(k)
 				player.rset(k.replace('func', 'var'), 10)
+				# Also call to ID
+				for sid in all_ids:
+					player.rpc_id(sid, k)
+					player.rset_id(sid, k.replace('func', 'var'), 10)
 	# Wait for RPCs to flow
 	yield(get_tree().create_timer(2), "timeout")
 	for peer in get_children():
@@ -54,9 +61,11 @@ func setup():
 			var expected = get_expected_func_count(player.is_network_master(), 4)
 			var state = player.state
 			for k in state:
-				_compare_state(k, expected[k], state[k], player)
+				# Times 2 because we call both broadcast and to ID
+				_compare_state(k, expected[k] * 2, state[k], player)
 				var vk = k.replace('func', 'var')
-				_compare_state(k, expected[k] * 10, player.get(vk), player)
+				# Times 2 because we call both broadcast and to ID, times 10 because each time the var is incremented by 10
+				_compare_state(vk, expected[k] * 10 * 2, player.get(vk), player)
 	# Wait for potential failure
 	yield(get_tree().create_timer(0.1), "timeout")
 	done()
